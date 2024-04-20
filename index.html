@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Screen Effect</title>
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+  <link rel="stylesheet" href="Assets\css.css">
+</head>
+
+<body>
+
+  <h1>Green Screen Effect</h1>
+
+  <div class="canvas-container">
+    <canvas id="fgcan" width="400" height="400"></canvas>
+    <canvas id="bgcan" width="400" height="400"></canvas>
+  </div>
+
+  <div class="input-group">
+    <label for="fgfile">Foreground:<input type="file" multiple="false" accept="image/*" id="fgfile"
+        onchange="loadForegroundImage()"></label>
+
+  </div>
+
+  <div class="input-group">
+    <label for="bgfile">Background:<input type="file" multiple="false" accept="image/*" id="bgfile"
+        onchange="loadBackgroundImage()"></label>
+
+  </div>
+
+  <div>
+    <input type="button" class="button" value="Merge Images" onclick="doGreenScreen()">
+    <input type="button" class="button" value="Clear" onclick="clearCanvas()">
+  </div>
+
+
+  <script src="Assets\js.js"></script>
+</body>
+
+</html>
